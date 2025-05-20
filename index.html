@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Participe do Seminário Online do GCRA sobre a recuperação de activos em Moçambique, de 27 a 29 de Maio de 2025, com especialistas nacionais e internacionais." />
+  <title>Seminário Online GCRA | Recuperação de Activos em Moçambique</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #b10000;
+      --primary-dark: #8a0000;
+      --secondary: #0078D7;
+      --secondary-dark: #005bb5;
+      --accent: #FFC72C;
+      --dark: #222;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Header Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      padding: 60px 20px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('pattern.png') repeat;
+      opacity: 0.1;
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero img {
+      max-width: 100px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+    
+    /* Countdown Timer */
+    .countdown-container {
+      margin: 30px auto;
+      max-width: 600px;
+    }
+    
+    .countdown-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      opacity: 0.9;
+    }
+    
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .countdown-item {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      padding: 15px;
+      min-width: 100px;
+      text-align: center;
+    }
+    
+    .countdown-number {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--accent);
+    }
+    
+    .countdown-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    .event-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px auto;
+      flex-wrap: wrap;
+    }
+    
+    .info-item {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 220px;
+    }
+    
+    .info-item i {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    
+    .info-text {
+      text-align: left;
+    }
+    
+    .info-text p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 3px;
+    }
+    
+    .info-text h4 {
+      font-size: 1.1rem;
+    }
+    
+    /* Main Content */
+    .content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary);
+    }
+    
+    /* Sessions */
+    .sessions-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .session {
+      background-color: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    
+    .session:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    
+    .session-header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 15px 20px;
+    }
+    
+    .session-header h3 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+    
+    .session-header time {
+      display: block;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    .session-body {
+      padding: 20px;
+    }
+    
+    .session-theme {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+    
+    .speakers {
+      margin-top: 20px;
+    }
+    
+    .speaker {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .speaker:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .speaker-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+    }
+    
+    .speaker-info h4 {
+      font-size: 1rem;
+      margin-bottom: 3px;
+      color: var(--primary-dark);
+    }
+    
+    .speaker-info p {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+      margin: 60px 0;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('pattern-2.png') repeat;
+      opacity: 0.1;
+      z-index: 1;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .cta-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .cta-content p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s;
+      cursor: pointer;
+      text-align: center;
+    }
+    
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--dark);
+      border: 2px solid var(--accent);
+    }
+    
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+    
+    .btn-secondary:hover {
+      background-color: rgba(255,255,255,0.1);
+      transform: translateY(-3px);
+    }
+    
+    /* Partners Section */
+    .partners-section {
+      margin: 60px 0;
+    }
+    
+    .partners-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    
+    .partner-logo {
+      max-height: 60px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+    
+    .partner-logo:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+    
+    .footer-column p, .footer-column a {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 10px;
+      display: block;
+    }
+    
+    .footer-column a {
+      color: var(--white);
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .footer-column a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      background: var(--accent);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+      
+      .countdown-item {
+        min-width: 80px;
+        padding: 10px;
+      }
+      
+      .countdown-number {
+        font-size: 1.5rem;
+      }
+      
+      .event-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .info-item {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .sessions-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animated {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="emblema.png" alt="Emblema da República de Moçambique" class="animated">
+      <h1 class="animated delay-1">Gabinete Central de Recuperação de Activos</h1>
+      <h2 class="animated delay-1">Seminário Online sobre Recuperação de Activos</h2>
+      
+      <!-- Countdown Timer -->
+      <div class="countdown-container animated delay-2">
+        <p class="countdown-title">O seminário começa em:</p>
+        <div class="countdown">
+          <div class="countdown-item">
+            <div class="countdown-number" id="days">00</div>
+            <div class="countdown-label">Dias</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="hours">00</div>
+            <div class="countdown-label">Horas</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="minutes">00</div>
+            <div class="countdown-label">Minutos</div>
+          </div>
+          <div class="countdown-item">
+            <div class="countdown-number" id="seconds">00</div>
+            <div class="countdown-label">Segundos</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="event-info animated delay-3">
+        <div class="info-item">
+          <i class="fas fa-calendar-alt"></i>
+          <div class="info-text">
+            <p>Data</p>
+            <h4>27-29 Maio 2025</h4>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <div class="info-text">
+            <p>Horário</p>
+            <h4>10h00 - 12h00 (Cada dia)</h4>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-globe"></i>
+          <div class="info-text">
+            <p>Local</p>
+            <h4>Online via Zoom</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="section-title animated">
+        <h2>Sobre o Evento</h2>
+      </div>
+      
+      <div class="about-content animated delay-1" style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+        <p>O Seminário Online sobre Recuperação de Activos, organizado pelo Gabinete Central de Recuperação de Activos (GCRA), reúne especialistas nacionais e internacionais para discutir os desafios e avanços na recuperação de activos em Moçambique.</p>
+        <p>Este evento de três dias abordará temas cruciais como o papel do GCRA, gestão de activos apreendidos e o envolvimento da sociedade civil no processo de recuperação.</p>
+      </div>
+    </section>
+
+    <!-- Sessions Section -->
+    <section class="sessions-section">
+      <div class="section-title animated">
+        <h2>Programa do Seminário</h2>
+      </div>
+      
+      <div class="sessions-container">
+        <!-- Day 1 -->
+        <article class="session animated">
+          <div class="session-header">
+            <h3>Dia 1 - 27 de Maio</h3>
+            <time>10h00 - 12h00</time>
+          </div>
+          <div class="session-body">
+            <p class="session-theme">O GCRA no processo de recuperação de activos em Moçambique</p>
+            
+            <div class="speakers">
+              <div class="speaker">
+                <img src="fotografias/ester.jpg" alt="Ester Cossa" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Ester Cossa</h4>
+                  <p>Magistrada MP – GCRA</p>
+                </div>
+              </div>
+              
+              <div class="speaker">
+                <img src="fotografias/jorge.jpg" alt="Jorge Chivinge" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Jorge Chivinge</h4>
+                  <p>Magistrado MP – GCRA</p>
+                </div>
+              </div>
+              
+              <div class="speaker">
+                <img src="fotografias/jose.jpg" alt="José Curado" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Moderador</h4>
+                  <p>José Curado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Day 2 -->
+        <article class="session animated delay-1">
+          <div class="session-header">
+            <h3>Dia 2 - 28 de Maio</h3>
+            <time>10h00 - 12h00</time>
+          </div>
+          <div class="session-body">
+            <p class="session-theme">Desafios de gestão de activos apreendidos no âmbito do crime organizado</p>
+            
+            <div class="speakers">
+              <div class="speaker">
+                <img src="fotografias/denilson.jpg" alt="Denilton Chau" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Denilton Chau</h4>
+                  <p>Jurista – GGA</p>
+                </div>
+              </div>
+              
+              <div class="speaker">
+                <img src="fotografias/liliana.jpg" alt="Liliana Everssone" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Moderadora</h4>
+                  <p>Liliana Everssone</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Day 3 -->
+        <article class="session animated delay-2">
+          <div class="session-header">
+            <h3>Dia 3 - 29 de Maio</h3>
+            <time>10h00 - 12h00</time>
+          </div>
+          <div class="session-body">
+            <p class="session-theme">O CIP e o papel da sociedade civil moçambicana no processo de recuperação de activos</p>
+            
+            <div class="speakers">
+              <div class="speaker">
+                <img src="fotografias/Mcip.jpg" alt="Zanele Chilundo" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Zanele Chilundo</h4>
+                  <p>Jurista – CIP</p>
+                </div>
+              </div>
+              
+              <div class="speaker">
+                <img src="fotografias/Hcip.jpg" alt="Baltazar Fael" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Baltazar Fael</h4>
+                  <p>Jurista – CIP</p>
+                </div>
+              </div>
+              
+              <div class="speaker">
+                <img src="fotografias/leandro.jpg" alt="Leandro Michel" class="speaker-img">
+                <div class="speaker-info">
+                  <h4>Leandro Michel</h4>
+                  <p>Magistrado MP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2 class="animated">Participe deste seminário!</h2>
+        <p class="animated delay-1">Faça parte das discussões sobre recuperação de activos em Moçambique.</p>
+        
+        <div class="cta-buttons animated delay-2">
+          <a href="https://bit.ly/4j7NF8D" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-video"></i> Participar via Zoom
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Mais Informações
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+      <div class="section-title animated">
+        <h2>Parceiros e Apoiadores</h2>
+      </div>
+      
+      <div class="partners-grid animated delay-1">
+        <img src="suiça.png" alt="Cooperação Suíça" class="partner-logo">
+        <img src="icar.png" alt="Iniciativa ICAR" class="partner-logo">
+        <img src="mp.jpeg" alt="Ministério Público" class="partner-logo">
+     
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Contactos</h3>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:gcra@gcra.gov.mz">gcra@gcra.gov.mz</a></p>
+        <p><i class="fas fa-phone"></i> +258 84 20 285 32</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Ahmed Sékou Touré, nº 21, 7º andar - Cidade de Maputo</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Links Úteis</h3>
+        <a href="#">PGR</a>
+        <a href="#">GGA</a>
+        <a href="#">Leilões</a>
+        <a href="#">CIP</a>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Sobre o GCRA</h3>
+        <p>O Gabinete Central de Recuperação de Activos (GCRA) é uma unidade especializada do Ministério Público de Moçambique responsável pela recuperação de activos provenientes de práticas criminosas.</p>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 Desenvolvido por <strong>Amilton Lhamine</strong> . Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown Timer Script
+    function updateCountdown() {
+      // Set the date we're counting down to (first day of the seminar)
+      const countdownDate = new Date("May 27, 2025 10:00:00").getTime();
+      
+      // Get current date and time
+      const now = new Date().getTime();
+      
+      // Calculate the difference between now and the countdown date
+      const difference = countdownDate - now;
+      
+      // Time calculations
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      
+      // Display the result
+      document.getElementById("days").textContent = days.toString().padStart(2, "0");
+      document.getElementById("hours").textContent = Math.floor(hours).toString().padStart(2, "0");
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+      
+      // If the countdown is finished
+      if (difference < 0) {
+        clearInterval(countdownTimer);
+        document.querySelector(".countdown-title").textContent = "O seminário já começou!";
+        document.querySelector(".countdown").innerHTML = `
+          <a href="https://bit.ly/4j7NF8D" class="btn btn-primary" style="margin-top: 10px;">
+            <i class="fas fa-video"></i> Acessar Agora
+          </a>
+        `;
+      }
+    }
+    
+    // Update the countdown every 1 second
+    const countdownTimer = setInterval(updateCountdown, 1000);
+    
+    // Initial call
+    updateCountdown();
+  </script>
+</body>
+</html>
